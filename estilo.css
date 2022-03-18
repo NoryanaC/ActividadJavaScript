@@ -1,0 +1,18 @@
+body{
+	background: oldlace;
+    margin: auto;
+    font-family: Papyrus, fantasy;
+}
+h2{
+	text-align: center;
+	color: #00695C;
+}
+
+button {
+	font-family: "roboto";
+	background: #00695C
+	font-size: 16px;
+	font-family: Papyrus, fantasy;
+	cursor: pointer;
+
+}

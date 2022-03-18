@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<title>Algoritmos de practica.</title>
+</head>
+<body>
+	<h2>Actividad practica de algoritmos</h3>
+
+	<h3>Escriba un programa en JS que reciba un número entero N e imprima todos los números primos desde 1 hasta N. </h3>
+	<label>
+            <span>Hasta que numero desea calcular los primos</span>
+            <input type="number" id="n" class="input">
+            <button onclick="NumPrimos()">Calcular</button>
+    </label>
+    <script>
+        function Primo(n) {
+
+        	for (let i = 2; i < n; i++) {
+				if (n % i === 0) {
+            		return false;
+            	}
+        	}
+    		return n !== 1;
+    	} 
+
+		function NumPrimos() {
+    
+    		let numero = document.getElementById("n").value
+    		let j = 2;
+    		let numerosPrimos = [];
+
+    		for (; j < numero; j++) {
+        		if (Primo(j)) {
+            		numerosPrimos.push(" <br>" + j);
+        		}
+    		}
+    		document.write("<h4>La cantidad de números primos es:</h4> " + numerosPrimos.length);
+        	document.write("<h4> Los numeros primos:</h4> " + numerosPrimos);    			
+		}
+    </script>
+    
+    <hr>
+    <h3>Dado un número N, imprima la sumatoria:
+	<br>Sumatoria = 1^N + 2^N + 3^N + 4^N... + N^N</h3>
+
+    <label>
+            <span>Ingrese un número:</span>
+            <input type="number" id="n2" class="input"> 
+            <button onclick="Sum()">Calcular</button>
+    </label>
+   	<script>
+   		function Sum(){
+    		let num = document.getElementById("n2").value;
+    		let vecSum=[num];
+    		let totalSum = 0;
+    		let i;
+    
+    		for (i = 0; i < num; i++) {
+        		vecSum[i] = Math.pow((i + 1), num);
+        		document.write((i + 1) + "^" + num + " = " + vecSum[i]+"<br>");
+        		totalSum = totalSum + vecSum[i];
+    		}
+			document.write("<h4>La sumatoria es: </h4>" + totalSum);
+ 		}
+   	</script>
+   	
+   	<hr>
+	<h3>Dado un número N, imprima la serie de Fibonacci (N términos.)
+	</h3>
+	<label>
+            <span> Ingrese un número "N":</span>
+            <input type="number" id="n3" class="input">
+            <button onclick=" ">Calcular</button>
+    </label>
+</body>
+</html>
